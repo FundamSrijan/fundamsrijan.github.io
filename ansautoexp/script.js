@@ -2022,6 +2022,7 @@ ogSkin.addEventListener("load",() =>{
     config.style.display = "block";
     invalidWarning.style.display = "block";
     invalidWarning.style.color = "yellow";
+    invalidWarning.style.webkitTextFillColor = "yellow";
     invalidWarning.content = "Warning : HD Skins aren't Currently Supported for Actions & Stuff expressions";
     
     
@@ -2036,6 +2037,7 @@ ogSkin.addEventListener("load",() =>{
     config.style.display = "none";
     invalidWarning.style.display = "block";
     invalidWarning.style.color = "red";
+    invalidWarning.style.webkitTextFillColor = "red";
     invalidWarning.content = "Invalid Skin Uploaded";
     
   };
