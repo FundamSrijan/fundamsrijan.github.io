@@ -1973,14 +1973,12 @@ const eyeMaskLoad = () => {
     eyePreview.style.maskImage = 'url("eyes/' + String(chooseEyes.value) + '.png")';
   };
   eyeInfo.content = eyeInfoContent[chooseEyes.value - 1];
-  location.reload(true);
   newSkinPreview();
 };
 
 const eyebrowMaskLoad = () => {
   eyebrowPreview.style.maskImage = 'url("eyebrows/' + String(chooseEyebrows.value) + '.png")';
   eyebrowInfo.content = eyebrowInfoContent[chooseEyebrows.value - 1];
-  location.reload(true);
   newSkinPreview();
 };
 
