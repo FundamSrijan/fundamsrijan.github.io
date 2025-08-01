@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ANS Expressions</title>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  
+  
+  
+  
+
+
+<!--Background-->
+<img id="bg">
+<!--Heading-->
+<div class="centering-divs">
+  <h1 class="para" id="main-heading">
+    A&S Expressions Automator
+  </h1>
+</div>
+<!--Description-->
+<div class="centering-divs">
+  <p>
+    Create Actions and Stuff expressions automatically for your custom skins .
+  </p>
+</div>
+
+
+
+
+
+
+
+<!--Upload Box-->
+<div class="centering-divs">
+<div class="centering-divs" id="upload-box">
+  +
+</div>
+<input id="skin-input" type="file" accept="image/*" hidden="true">
+</div>
+<div class="centering-divs">
+  <p class="subtext" style="text-decoration:underline;">Uplaod your skin here</p>
+</div>
+
+<!--Displaying the original image-->
+<div id="invalid-warning" class="centering-divs locked"></div>
+
+
+
+<!--Configuration and Download-->
+<div id="config" class="locked">
+  <div class="centering-divs">
+  <img class="imgs locked" id="og-skin" alt="skin">
+  <canvas id="og-skin-face" class="imgs" width="16" height="16"></canvas>
+  </div>
+
+
+
+  <div class="vertical">
+    <!--Options for eyes-->
+    <h1 class="sub-heading">Eyes</h1>
+    <p id="eye-note">Choose the format that correctly matched your skin's eyes . Also include white area of the eyes .<br><br>Note : Your eyes may also include eyebrows when using surprised expression .</p>
+    
+    <div class="centering-divs">
+      <div class="vertical">
+        <h2>Right Eye</h2>
+        <input id="choose-left-eye" type="range" min="0" max="22" value="0">
+        <div>
+          <button id="left-eye-back"></button>
+          <button id="left-eye-for"></button>
+          <p id="left-eye-info">No Eye<br><i>(Move slider or use buttons to cycle through eyes)</i></p>
+          <div id="surprise-left">
+            <div id="surprise-left-box">
+              <div id="surprise-left-check"></div>
+            </div>
+            <p id="surprise-left-text">Use Surprise Emotion</p>
+          </div>
+        </div>
+        
+        <h2>Left Eye</h2>
+        <input id="choose-right-eye" type="range" min="0" max="22" value="0">
+        <div>
+          <button id="right-eye-back"></button>
+          <button id="right-eye-for"></button>
+          <p id="right-eye-info">No Eye<br><i>(Move slider or use buttons to cycle through eyes)</i></p>
+          <div id="surprise-right">
+            <div id="surprise-right-box">
+              <div id="surprise-right-check"></div>
+            </div>
+            <p id="surprise-right-text">Use Surprise Emotion</p>
+          </div>
+        </div>
+      </div>
+      <div class="vertical preview-divs">
+        <div id="same-eye">
+          <div id="same-eye-box">
+            <div id="same-eye-check"></div>
+          </div>
+          <p id="same-eye-text">Use Same Eyes</p>
+        </div>
+        <div id="eye-preivew" class="options">
+          <img id="left-eye-preview">
+          <img id="right-eye-preview">
+        </div>
+      </div>
+    </div>
+
+
+
+  <div class="vertical">
+    <!--Option for eyebrows-->
+    <h1 class="sub-heading">Eyebrows</h1>
+    <p id="eyebrow-note">Choose the format that correctly matched your skin's eyebrows .<br><br>Note : Make sure they cover the surprised eyes pixels (if used).</p>
+  
+    <div class="centering-divs">
+      <div class="vertical">
+        <h2>Right Eyebrow</h2>
+        <input id="choose-left-eyebrow" type="range" min="0" max="15" value="0">
+        <div>
+          <button id="left-eyebrow-back"></button>
+          <button id="left-eyebrow-for"></button>
+          <p id="left-eyebrow-info">No Eyebrow<br><i>(Move slider or use buttons to cycle through eyebrows)</i></p>
+        </div>
+        <h2>Left Eyebrow</h2>
+        <input id="choose-right-eyebrow" type="range" min="0" max="15" value="0">
+        <div>
+          <button id="right-eyebrow-back"></button>
+          <button id="right-eyebrow-for"></button>
+          <p id="right-eyebrow-info">No Eyebrow<br><i>(Move slider or use buttons to cycle through eyebrows)</i></p>
+        </div>
+      </div>
+      <div class="vertical preview-divs">
+        <div id="same-eyebrow">
+          <div id="same-eyebrow-box">
+            <div id="same-eyebrow-check"></div>
+          </div>
+          <p id="same-eyebrow-text">Use Same Eyebrows</p>
+        </div>
+        <div id="eyebrow-preivew" class="options">
+          <img id="left-eyebrow-preview">
+          <img id="right-eyebrow-preview">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <h1 class="sub-heading">Clean-Up</h1>
+  <!--Cleanup-->
+  <div id="cleanup">
+    <div id="cleanup-box">
+      <div id="cleanup-check"></div>
+    </div>
+    <p id="cleanup-text">Removes glitched , interfering and unused pixels .</p>
+  </div>
+
+
+
+  <h1 class="sub-heading">Skin Color</h1>
+  <!--Skin Color-->
+  
+  <div class="centering-divs">
+    <label id="skin-color-label" for="skin-color">
+      <input id="skin-color" type="color" value="#800000">
+      <div class="vertical">
+        Choose skin's skin/body color
+        <p class="subtext">(Will be adjusted and used for closed eyes)</p>
+      </div>
+    </label>
+  </div>
+  
+  <!--More colors-->
+  <h1 id="more-colors-toggle" class="sub-heading">Show More Colors</h1>
+  <div id="more-colors" class="locked"></div>
+  
+  
+    <!--Preview-->
+  <h1 class="sub-heading">Preview</h1>
+  <div class="centering-divs">
+    <canvas id="new-skin" width="128" height="128"></canvas>
+    <canvas id="for-ld" width="64" height="64" class="locked"></canvas>
+    <a id="download-link" class="locked"></a>
+  </div>
+    <!--Download Button-->
+  <div class="centering-divs">
+    <div id="download-btn">Download</div>
+  </div>
+    
+</div>
+
+
+
+
+
+
+
+
+<div id="bottom-margin"></div>
+
+  <!--Javascripts-->
+  <script src="script.js"></script>
+</body>
+</html>
