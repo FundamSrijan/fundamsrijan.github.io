@@ -764,7 +764,7 @@ newSkinPreview = () => {
     newSkinCtx.putImageData(newSkinCtx.getImageData(24,22,6,2),30,36);
     doCleanup ? newSkinCtx.clearRect(88,22,6,2) : {};
   } else if (chooseRightEyebrow.value==="4") {
-    newSkinCtx.putImageData(newSkinCtx.getImageData(22,24,6,2),30,38);
+    newSkinCtx.putImageData(newSkinCtx.getImageData(24,24,6,2),30,38);
     doCleanup ? newSkinCtx.clearRect(88,24,6,2) : {};
   } else if (chooseRightEyebrow.value==="5") {
     newSkinCtx.putImageData(newSkinCtx.getImageData(24,26,6,2),78,32);
