@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="snap" x="-20%" y="-20%" width="140%" height="140%">
+            <feTurbulence
+                type="turbulence"
+                baseFrequency="0.2"
+                result="noise" 
+            />
+            <feDisplacementMap
+                in2="noise"
+                in="SourceGraphic"
+                scale="25"
+                xChannelSelector="R"
+                yChannelSelector="G" 
+            />
+        </filter>
+    </defs>
+</svg>
