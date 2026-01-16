@@ -3,8 +3,8 @@
     "short_name": "FUNDAM",
     "start_url": "index.html",
     "display": "standalone",
-    "background_color": "#202020ff",
-    "theme_color": "#000000ff",
+    "background_color": "#4080c0ff",
+    "theme_color": "#0080ffff",
     "icons": [
             {
                 "src": "https://drive.google.com/thumbnail?id=1uVNkqVRIAfAhm4ylh2lFzvTEZ13oISqd&sz=w512-h512",
