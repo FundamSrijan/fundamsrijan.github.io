@@ -288,7 +288,7 @@ label[for="page-sketches"] > div {
 }
 label[for="page-pixel-art"] > div {
     --c-move-1: #804000ff;
-    --c-move-2: #c0c000ff
+    --c-move-2: #c0c000ff;
 }
 label[for="page-home"]:has(#previous) { position: absolute; top: 15%; right: 0%; }
 
