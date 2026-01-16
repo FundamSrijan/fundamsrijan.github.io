@@ -290,10 +290,6 @@ label[for="page-pixel-art"] > div {
     --c-move-1: #804000ff;
     --c-move-2: #c0c000ff
 }
-label[for="page-home"] > div {
-    --c-move-1: #202020ff;
-    --c-move-2: #606060ff;
-}
 label[for="page-home"]:has(#previous) { position: absolute; top: 15%; right: 0%; }
 
 .next {
@@ -304,6 +300,7 @@ label[for="page-home"]:has(#previous) { position: absolute; top: 15%; right: 0%;
     z-index: 1;
 }
 #previous {
+    background: #202020ff;
     display: flex;
     justify-content: center;
     align-content: center;
