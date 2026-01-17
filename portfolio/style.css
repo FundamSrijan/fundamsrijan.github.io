@@ -90,7 +90,7 @@ a, p > label { &:has(h2) { text-decoration-color: var(--c-ti); } }
     position: relative;
     background: linear-gradient(135deg, #ffffff40, #00000040);
     transform: scale(1);
-    will-change: transform, box-shadow, backdrop-filter;
+    will-change: transform, box-shadow;
     &:hover { transform: scale(0.95); }
 }
 .stickered::before { filter: blur(0); }
@@ -329,7 +329,6 @@ label[for="page-home"]:has(#previous) { position: absolute; top: 15%; right: 0%;
 @media (max-aspect-ratio : 22/17) {
     /* Solid Glass + Hover Chroma */
     .glass {
-        backdrop-filter: blur(0.5vw);
         box-shadow:
             -0.5vw -0.5vw 0vw 0vw var(--c-g1),
             0.75vw 0.75vw 0vw 0vw var(--c-g2),
@@ -346,7 +345,6 @@ label[for="page-home"]:has(#previous) { position: absolute; top: 15%; right: 0%;
         }
     }
     .stickered {
-        backdrop-filter: blur(0);
         box-shadow:
             -0.5vw -0.5vw 0vw 0vw var(--c-g1),
             0.75vw 0.75vw 0vw 0vw var(--c-g2);
@@ -532,7 +530,6 @@ label[for="page-home"]:has(#previous) { position: absolute; top: 15%; right: 0%;
 @media (min-aspect-ratio : 22/17) {
     /* Solid Glass + Hover Chroma */
     .glass {
-        backdrop-filter: (0.5vh);
         box-shadow:
             -0.5vh -0.5vh 0vh 0vh var(--c-g1),
             0.75vh 0.75vh 0vh 0vh var(--c-g2),
@@ -549,7 +546,6 @@ label[for="page-home"]:has(#previous) { position: absolute; top: 15%; right: 0%;
         }
     }
     .stickered {
-        backdrop-filter: blur(0);
         box-shadow:
             -0.5vh -0.5vh 0vh 0vh var(--c-g1),
             0.75vh 0.75vh 0vh 0vh var(--c-g2);
