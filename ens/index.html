@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Initialization-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#b33636">
+    
+    <!--Open Graphs-->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fundamsrijan.github.io/">
+    <meta property="og:title" content="Expressions & Stuff">
+    <meta property="og:site_name" content="FundamSrijan">
+    <meta property="og:description" content="Actions & Stuff Expressions Automator">
+    <meta property="og:image" content="https://drive.google.com/thumbnail?id=1WgH5Td_9YlmsCvUxHKQBoPH8932eUysM&sz=w1200-h630">
+    <!--Twitter Tags-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Expressions & Stuff">
+    <meta name="twitter:description" content="Actions & Stuff Expressions Automator">
+    <meta name="twitter:image" content="https://drive.google.com/thumbnail?id=1WgH5Td_9YlmsCvUxHKQBoPH8932eUysM&sz=w1200-h630">
+    
+    <!--Title-->
+    <title>Expressions & Stuff</title>
+
+	
+    <!--Linked Resources-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://drive.google.com/thumbnail?id=1uVNkqVRIAfAhm4ylh2lFzvTEZ13oISqd&sz=w512-h512" type="image/png" sizes="any">
+</head>
+<body>
+
+
+
+
+
+<!--Background-->
+<img id="bg">
+<div id="content">
+<!--Heading-->
+	<h1 id="title">Expessions & Stuff</h1>
+<!--Description-->
+	<p>Easily make your custom skins support actions and stuff expressions !</p>
+
+
+
+<!--Upload Box-->
+	<input id="skin-input" type="file" accept="image/*" hidden="true">
+	<p id="upload">Select skin</p>
+
+<!--Displaying the original image-->
+	<p id="warn" style="display: none;"></p>
+	<img id="og-skin" alt="skin" style="display: none;">
+	<canvas id="og-skin-face" class="imgs" width="16" height="16" style="display: none;"></canvas>
+
+<!--Configuration and Download-->
+	<div id="config" style="display: none;">
+	
+	
+	
+		<!--Options for eyes-->
+		<h1>Eyes</h1>
+		<p id="eye-note">Fit the eyes (with white area) perfectly in the preview . Additionally , include eyebrows when using surprise expression .</p>
+	
+		<h2>Right Eye</h2>
+		<input id="choose-left-eye" type="range" min="0" max="22" value="0">
+		<button id="left-eye-back"></button>
+		<button id="left-eye-for"></button>
+		<p id="left-eye-info">No Eye<br><i>(Move slider or use buttons to cycle through eyes)</i></p>
+		<div id="surprise-left">
+			<div id="surprise-left-box">
+				<div id="surprise-left-check"></div>
+			</div>
+			<p id="surprise-left-text">Use Surprise Emotion</p>
+		</div>
+				
+		<h2>Left Eye</h2>
+		<input id="choose-right-eye" type="range" min="0" max="22" value="0">
+		<button id="right-eye-back"></button>
+		<button id="right-eye-for"></button>
+		<p id="right-eye-info">No Eye<br><i>(Move slider or use buttons to cycle through eyes)</i></p>
+		<div id="surprise-right">
+			<div id="surprise-right-box">
+				<div id="surprise-right-check"></div>
+			</div>
+			<p id="surprise-right-text">Use Surprise Emotion</p>
+		</div>
+	
+		<div id="same-eye">
+			<div id="same-eye-box">
+				<div id="same-eye-check"></div>
+			</div>
+			<p id="same-eye-text">Symmetric Eyes</p>
+		</div>
+	
+		<div id="eye-preview">
+			<img id="left-eye-preview">
+			<img id="right-eye-preview">
+		</div>
+	
+	
+	
+		<!--Option for eyebrows-->
+		<h1>Eyebrows</h1>
+		<p id="eyebrow-note">Fit the eyebrows perfectly in the preview . Cover the surprised eyes pixels (if used) .</p>
+		
+		<h2>Right Eyebrow</h2>
+		<input id="choose-left-eyebrow" type="range" min="0" max="15" value="0">
+		<button id="left-eyebrow-back"></button>
+		<button id="left-eyebrow-for"></button>
+		<p id="left-eyebrow-info">No Eyebrow<br><i>(Move slider or use buttons to cycle through eyebrows)</i></p>
+	
+		<h2>Left Eyebrow</h2>
+		<input id="choose-right-eyebrow" type="range" min="0" max="15" value="0">
+		<button id="right-eyebrow-back"></button>
+		<button id="right-eyebrow-for"></button>
+		<p id="right-eyebrow-info">No Eyebrow<br><i>(Move slider or use buttons to cycle through eyebrows)</i></p>
+	
+		<div id="same-eyebrow">
+			<div id="same-eyebrow-box">
+				<div id="same-eyebrow-check"></div>
+			</div>
+			<p id="same-eyebrow-text">Symmetric Eyebrows</p>
+		</div>
+	
+		<div id="eyebrow-preview">
+			<img id="left-eyebrow-preview">
+			<img id="right-eyebrow-preview">
+		</div>
+	
+	
+	
+		<!--Cleanup-->
+		<h2>Clean-Up</h2>
+		<div id="cleanup">
+			<div id="cleanup-box">
+				<div id="cleanup-check"></div>
+			</div>
+			<p id="cleanup-text">Remove glitched , interfering and unused pixels .</p>
+		</div>
+	
+	
+	
+		<!--Skin Color-->
+		<h2>Skin Color</h2>
+		<label id="skin-color-label" for="skin-color">
+			<input id="skin-color" type="color" value="#e0b080">
+			<p>Choose skin's skin/body color (Will automatically be adjusted and used for closed eyes)</p>
+		</label>
+		
+		<!--More colors-->
+		<h2 id="more-colors-toggle">Show More Colors ↓</h2>
+		<div id="more-colors" style="display: none;"></div>
+		
+		
+			<!--Preview-->
+		<h1>Preview</h1>
+		<canvas id="new-skin" width="128" height="128"></canvas>
+		<canvas id="for-ld" width="64" height="64" style="display: none;"></canvas>
+		<a id="download-link" style="display: none;"></a>
+		<div id="download-btn">Download</div>
+	</div>
+	<a href="https://fundamsrijan.github.io/?page=web" id="sign"></a>
+</div>
+<!--Javascripts-->
+<script src="script.js"></script>
+</body>
+</html>
